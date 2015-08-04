@@ -6,7 +6,7 @@
         vm.previousStep=previousStep;
         vm.nextStep=nextStep;
         vm.save=save;
-
+        vm.speechEdit=speechEdit;
         function previousStep(){
             vm.step--;
         }
@@ -15,7 +15,9 @@
         }
         function save(model) {
             console.log(model);
-            //rest call goes here
+        }
+        function speechEdit(){
+            vm.step=2;
         }
     }
     angular.module("mlevel").controller("homeController", homeController);

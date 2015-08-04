@@ -3,3 +3,17 @@ body{
     font-family: Verdana;
     width: 1024px;
 }
+.prop {
+     padding: 5px;
+ }
+
+.prop .name {
+    text-align: left;
+    width: 15%;
+    white-space: nowrap;
+}
+
+.prop .value {
+    text-align: left;
+    width: 85%;
+}
