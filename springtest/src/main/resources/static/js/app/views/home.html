@@ -1,0 +1,28 @@
+<form class="form-vertical" novalidate>
+    <fieldset ng-show="vm.step == 1">
+        <legend>Step one</legend>
+        <div class="form-group">
+            <label for="name">Your name</label>
+            <input class="form-control" type="text" id="name" name="name" ng-model="vm.person.name" />
+        </div>
+        <button class="btn btn-primary" ng-click="vm.nextStep()">Next step</button>
+    </fieldset>
+    <fieldset ng-show="vm.step == 2">
+        <legend>Step two</legend>
+        <div class="form-group">
+            <label for="email">Your email</label>
+            <input class="form-control" type="email" id="email" name="email" ng-model="vm.person.email" />
+        </div>
+        <button class="btn btn-default" ng-click="vm.previousStep()">Previous step</button>
+        <button class="btn btn-primary" ng-click="vm.nextStep()">Next step</button>
+    </fieldset>
+    <fieldset ng-show="vm.step == 3">
+        <legend>Step three</legend>
+        <div class="form-group">
+            <label for="msg">Short message</label>
+            <input class="form-control" type="text" id="msg" name="msg" ng-model="vm.person.msg" />
+        </div>
+        <button class="btn btn-default" ng-click="vm.previousStep()">Previous step</button>
+        <button class="btn btn-primary" ng-click="vm.save(vm.person)">Submit</button>
+    </fieldset>
+</form>
