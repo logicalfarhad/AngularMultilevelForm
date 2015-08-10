@@ -1,0 +1,53 @@
+<div class="form-group">
+    <label class="control-label col-md-2" for="name">Name:</label>
+    <div class="col-md-4">
+        <input type="text" class="form-control" id="name" placeholder="Enter Name" ng-model="vm.speaker.name"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-md-2" for="surname">Surname:</label>
+    <div class="col-md-4">
+        <input type="text" class="form-control" id="surname" placeholder="Surname" ng-model="vm.speaker.surname"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-md-2" for="surname">Email:</label>
+    <div class="col-md-4">
+        <input type="email" class="form-control" id="email" placeholder="email" ng-model="vm.speaker.email"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-md-2" for="twitter">Twitter:</label>
+    <div class="col-md-4">
+        <input type="text" class="form-control" id="twitter" placeholder="twitter" ng-model="vm.speaker.twitter"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-md-2" for="from">From:</label>
+    <div class="col-md-4">
+        <select id="from" name="from" class="form-control" ng-model="vm.speaker.location">
+            <option value="1">Dhaka</option>
+            <option value="2">NY</option>
+            <option value="3">California</option>
+        </select>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-md-2" for="bioLine">Bio Line:</label>
+    <div class="col-md-4">
+        <textarea class="form-control" id="bioLine" name="bioLine" ng-model="vm.speaker.bioline">lorem ispus dollar</textarea>
+    </div>
+</div>
+<div class="form-group">
+    <label class=" control-label col-md-2" for="Bio">Bio</label>
+    <div class="col-md-4">
+        <textarea class="form-control" id="Bio" name="Bio" ng-model="vm.speaker.bio">default text</textarea>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-2">
+        <a ui-sref="/.presentation" class="btn btn-primary">
+            Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

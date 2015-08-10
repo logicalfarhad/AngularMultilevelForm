@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-md-4">
+        <h1>Speaker details</h1>
+        <table>
+            <tbody>
+            <tr>
+                <td>Name:</td>
+                <td>{{vm.speaker.name}}</td>
+            </tr>
+            <tr>
+                <td>Surname:</td>
+                <td>{{vm.speaker.surname}}</td>
+            </tr>
+            <tr>
+                <td>From:</td>
+                <td>Dhaka</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{{vm.speaker.email}}</td>
+            </tr>
+            <tr>
+                <td>Twitter:</td>
+                <td>{{vm.speaker.twitter}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a ui-sref="/.profile" class="btn btn-sm btn-success pull-right">Edit speaker</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h1>Speech summary</h1>
+        <table>
+            <tbody>
+            <tr>
+                <td colspan="2">{{vm.speech.title}}</td>
+            </tr>
+            <tr>
+                <td>Topic:</td>
+                <td>{{vm.speech.topic}}</td>
+            </tr>
+            <tr>
+                <td>Type:</td>
+                <td>{{vm.speech.type}}</td>
+            </tr>
+            <tr>
+                <td>Level:</td>
+                <td>{{vm.speech.level}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a ui-sref="/.presentation" value="Edit this speech" class="btn btn-sm btn-success pull-right">Edit this speech</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <input type="submit" value="submit" class="btn btn-success" />
+
+    </div>
+</div>

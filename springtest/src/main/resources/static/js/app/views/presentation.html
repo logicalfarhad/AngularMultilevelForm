@@ -1,0 +1,47 @@
+<div class="form-group">
+    <label class="control-label col-md-2" for="title">Title:</label>
+    <div class="col-md-4">
+        <input type="text" class="form-control" id="title" placeholder="Title" ng-model="vm.speech.title"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-md-2" for="topic">Topic:</label>
+    <div class="col-md-4">
+        <select id="topic" name="topic" class="form-control" ng-model="vm.speech.topic">
+            <option value="1">new programming </option>
+            <option value="2">paradigm</option>
+            <option value="3">functional programming</option>
+        </select>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-md-2" for="type">Type:</label>
+    <div class="col-md-3">
+        <select id="type" class="form-control" ng-model="vm.speech.type">
+            <option value="1 hour">One hour live</option>
+            <option value="2 hour">Two hour</option>
+            <option value="3 hour">Three hour</option>
+        </select>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="control-label col-md-2" for="level">Level:</label>
+    <div class="col-md-2">
+        <select id="level" class="form-control" ng-model="vm.speech.level">
+            <option value="Expert">Expert</option>
+            <option value="Begineer">Begineer</option>
+            <option value="Novice">Novice</option>
+        </select>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-md-2" for="abstract">Abstract:</label>
+    <div class="col-md-4">
+        <textarea cols="40" rows="10" id="abstract" placeholder="Abstract" class="form-control" ng-model="vm.speech.abstract"></textarea>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-2"><a ui-sref="/.profile" class="btn btn-success">Previous</a></div>
+    <div class="col-md-2"><a ui-sref="/.summary" class="btn btn-info">Next</a></div>
+</div>
