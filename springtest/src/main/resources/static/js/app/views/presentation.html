@@ -1,10 +1,11 @@
-<div class="form-group">
+<div class="form-group" ng-class="vm.error('title')">
     <label class="control-label col-md-2" for="title">Title:</label>
     <div class="col-md-4">
-        <input type="text" class="form-control" id="title" placeholder="Title" ng-model="vm.speech.title"/>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Title" ng-model="vm.speech.title" required/>
+        <span class="has-error help-block" ng-show="vm.form.title.$invalid && vm.form.title.$dirty">Title is required</span>
     </div>
 </div>
-<div class="form-group">
+<div class="form-group" ng-class="vm.error('topic')">
     <label class="control-label col-md-2" for="topic">Topic:</label>
     <div class="col-md-4">
         <select id="topic" name="topic" class="form-control" ng-model="vm.speech.topic">
@@ -12,27 +13,30 @@
             <option value="2">paradigm</option>
             <option value="3">functional programming</option>
         </select>
+        <span class="has-error help-block" ng-show="vm.form.topic.$invalid && vm.form.topic.$dirty">Topic is required</span>
     </div>
 </div>
-<div class="form-group">
+<div class="form-group" ng-class="vm.error('type')">
     <label class="control-label col-md-2" for="type">Type:</label>
     <div class="col-md-3">
-        <select id="type" class="form-control" ng-model="vm.speech.type">
+        <select id="type" class="form-control" ng-model="vm.speech.type" name="type" required>
             <option value="1 hour">One hour live</option>
             <option value="2 hour">Two hour</option>
             <option value="3 hour">Three hour</option>
         </select>
+        <span class="has-error help-block" ng-show="vm.form.type.$invalid && vm.form.type.$dirty">Type is required</span>
     </div>
 </div>
 
-<div class="form-group">
+<div class="form-group" ng-class="vm.error('level')">
     <label class="control-label col-md-2" for="level">Level:</label>
     <div class="col-md-2">
-        <select id="level" class="form-control" ng-model="vm.speech.level">
+        <select id="level" class="form-control" name="level" ng-model="vm.speech.level" required>
             <option value="Expert">Expert</option>
             <option value="Begineer">Begineer</option>
             <option value="Novice">Novice</option>
         </select>
+        <span class="has-error help-block" ng-show="vm.form.level.$invalid && vm.form.level.$dirty">Level is required</span>
     </div>
 </div>
 <div class="form-group">
@@ -43,5 +47,5 @@
 </div>
 <div class="form-group">
     <div class="col-md-2"><a ui-sref="/.profile" class="btn btn-success">Previous</a></div>
-    <div class="col-md-2"><a ui-sref="/.summary" class="btn btn-info">Next</a></div>
+    <div class="col-md-2"><a ui-sref="/.summary" class="btn btn-info" ng-disabled="vm.form.$invalid">Next</a></div>
 </div>

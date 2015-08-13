@@ -22,5 +22,6 @@
                 "templateUrl":"js/app/views/summary.html"
             });
     }
+    config.$inject=["$stateProvider", "$urlRouterProvider"];
     angular.module("mlevel").config(config);
 }())
