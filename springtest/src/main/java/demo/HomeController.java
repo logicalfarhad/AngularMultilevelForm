@@ -20,10 +20,9 @@ public class HomeController {
         model.addAttribute("greeting", "hello world");
         return "index";
     }
-    //List<Person> personList=new ArrayList<Person>();
     @RequestMapping(value = "/save",method = RequestMethod.POST)
     @ResponseBody
-   public Person addItem(@RequestBody Person person,@RequestBody Speaker speaker) {
+   public Person addItem(@RequestBody Person person) {
         Person p=person;
         return p;
     }
