@@ -15,13 +15,13 @@
             })
             .state("/.presentation",{
                 url:"presentation",
-                "templateUrl":"js/app/views/presentation.html"
+                templateUrl: "js/app/views/presentation.html"
             })
             .state("/.summary",{
                 url:"summary",
-                "templateUrl":"js/app/views/summary.html"
+                templateUrl: "js/app/views/summary.html"
             });
     }
     config.$inject=["$stateProvider", "$urlRouterProvider"];
     angular.module("mlevel").config(config);
-}())
+}());

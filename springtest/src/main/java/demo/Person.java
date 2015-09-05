@@ -1,7 +1,5 @@
 package demo;
 
-import org.springframework.web.multipart.MultipartFile;
-
 /**
  * Created by S.M.Farhad on 27/07/2015.
  */
@@ -9,7 +7,8 @@ public class Person {
     private int Id;
     private String name;
     private String email;
-    private MultipartFile picture;
+
+    //    private MultipartFile file;
     public Person(){
 
     }
@@ -38,11 +37,11 @@ public class Person {
         this.email = email;
     }
 
-    public MultipartFile getPicture() {
-        return picture;
+  /*  public MultipartFile getPicture() {
+        return file;
     }
 
     public void setPicture(MultipartFile picture) {
-        this.picture = picture;
-    }
+        this.file = picture;
+    }*/
 }

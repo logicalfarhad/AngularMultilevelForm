@@ -6,40 +6,21 @@
             var s = vm.form[name];
             return s.$invalid && s.$dirty ? "has-error" : "";
         };
-
-        var person ={
-            Id:1,
-            name:"forhad",
-            email:"forhad.univdhaka@gmail.com"
-        };
-
-        var speaker={
-             Id:2,
-             name:"dummy",
-             age:25
-        };
-       /* $http.post("/save",JSON.stringify(person)).success(function(a){
-           console.log(a);
-        }).error(function(d){
-            console.log(d);
-        });*/
         vm.processForm=function(speaker,speech){
-            var file=vm.file;
-            console.log(file)
+            console.log(speaker);
             var fd=new FormData();
-            fd.append("person",angular.toJson(person));
-            fd.append("file",file);
-            console.log(fd);
-            $http({
-                method: 'POST',
-                url: '/save',
-                headers: {'Content-Type': undefined},
-                data: fd,
-                transformRequest: angular.identity
-            })
-                .success(function(data, status) {
-                    alert("success");
-                });
+            angular.forEach(speaker, function (value, key) {
+                fd.append(key, value);
+            });
+
+            $http.post("/save", fd, {
+                transformRequest: angular.identity,
+                headers: {'Content-Type': undefined}
+            }).then(function (data) {
+                console.log("it works!");
+            }, function (error) {
+                console.log("no");
+            });
         }
     }
     homeController.$inject=["$http"];
